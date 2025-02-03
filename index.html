@@ -2,12 +2,20 @@
 <html>
 <head>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
     .container {
       position: relative;
       width: 100%;
       min-height: 100vh;
-      background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+      background: linear-gradient(45deg, #0a192f, #112240);
       overflow: hidden;
+      color: white;
     }
 
     .bubbles {
@@ -25,7 +33,7 @@
       bottom: -100px;
       width: 40px;
       height: 40px;
-      background: #4fc3dc;
+      background: #64ffda;
       border-radius: 50%;
       opacity: 0.5;
       animation: rise 15s infinite ease-in;
@@ -46,7 +54,7 @@
       left: 35%;
       animation-duration: 12s;
       animation-delay: 4s;
-      background: #4fc3dc;
+      background: #64ffda;
     }
 
     .bubble:nth-child(4) {
@@ -64,7 +72,7 @@
       left: 65%;
       animation-duration: 14s;
       animation-delay: 8s;
-      background: #4fc3dc;
+      background: #64ffda;
     }
 
     @keyframes rise {
@@ -85,8 +93,53 @@
     .content {
       position: relative;
       z-index: 1;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #64ffda;
+    }
+
+    .subtitle {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+      color: #8892b0;
+    }
+
+    .description {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #a8b2d1;
+    }
+
+    .config-box {
+      background: rgba(17, 34, 64, 0.8);
+      border-radius: 8px;
       padding: 20px;
-      color: white;
+      margin: 20px 0;
+      text-align: left;
+      border: 1px solid #233554;
+    }
+
+    .config-box pre {
+      color: #a8b2d1;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .footer {
+      margin-top: 40px;
+      color: #64ffda;
+      font-size: 1.2em;
+    }
+
+    .highlight {
+      color: #64ffda;
     }
   </style>
 </head>
@@ -100,8 +153,39 @@
       <div class="bubble"></div>
     </div>
     <div class="content">
-      <h1>Future Minds</h1>
-      <p>Innovating Today, Inspiring Tomorrow</p>
+      <h1 class="title">👋 Hi there</h1>
+      <h2 class="title">We are Future Minds</h2>
+      <h3 class="subtitle">Innovating Today, Inspiring Tomorrow</h3>
+      
+      <p class="description">
+        We are a forward-thinking research group, committed to leveraging technology to solve real-world challenges. 
+        With a blend of creativity and expertise, we aim to develop solutions that bridge the gap between innovation and practicality. 
+        Our mission is to craft projects that leave a lasting impact, turning ideas into actionable outcomes.
+      </p>
+
+      <div class="config-box">
+        <h3 class="highlight">Our Configuration 🧩</h3>
+        <pre>
+const config = {
+    name: "Future Minds",
+    project: "Restaurant Suggestions Using Reviews Based on User Location",
+    team_members: [
+        "Hasitha 🤓",
+        "Anuththara 👩🏻",
+        "Chathura 👺"
+    ],
+    tools: [
+        "Google Maps API",
+        "Machine Learning",
+        "Sentiment Analysis",
+        "Geospatial Data",
+    ],
+}</pre>
+      </div>
+
+      <p class="footer">
+        🌟 Join us as we push the boundaries of technology and innovation to create something extraordinary!
+      </p>
     </div>
   </div>
 </body>
